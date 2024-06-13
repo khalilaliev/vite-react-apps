@@ -1,11 +1,13 @@
 import Title from "../components/Title/Title";
-import TodoList from "../components/Todo/TodoList";
+import TodoWrapper from "../components/Todo/TodoWrapper";
 
 const Todo = () => {
   return (
     <>
       <Title title="Todo" />
-      <TodoList />
+      <div className=" text-center flex flex-col gap-7 w-1/3 my-0 mx-auto">
+        <TodoWrapper />
+      </div>
     </>
   );
 };
