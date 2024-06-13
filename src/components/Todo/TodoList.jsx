@@ -6,7 +6,7 @@ const TodoList = ({ task, toggleComplete, deleteTodo, editTodo }) => {
     <div className=" border rounded-2xl p-6 items-center flex justify-around gap-6">
       <p
         onClick={() => toggleComplete(task.id)}
-        className={`text-3xl ${
+        className={` text-3xl ${
           task.isCompleted ? "line-through text-green-500" : ""
         }`}
       >
@@ -17,13 +17,13 @@ const TodoList = ({ task, toggleComplete, deleteTodo, editTodo }) => {
           onClick={() => {
             editTodo(task.id);
           }}
-          className=" text-3xl"
+          className=" cursor-pointer text-3xl"
         />
         <FaRegTrashCan
           onClick={() => {
             deleteTodo(task.id);
           }}
-          className=" text-3xl"
+          className=" cursor-pointer text-3xl"
         />
       </div>
     </div>

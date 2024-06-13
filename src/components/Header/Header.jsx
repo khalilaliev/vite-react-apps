@@ -1,6 +1,8 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Header = () => {
+  const location = useLocation();
+
   return (
     <>
       <div className="navbar">
@@ -10,16 +12,37 @@ const Header = () => {
           </NavLink>
         </div>
         <div className="navbar-center">
-          <NavLink className="navbar-item" to="/">
+          <NavLink
+            className={`navbar-item ${
+              location.pathname === "/home" ? "navbar-active" : ""
+            }`}
+            to="/home"
+            end
+          >
             Home
           </NavLink>
-          <NavLink className="navbar-item" to="/todo">
+          <NavLink
+            className={`navbar-item ${
+              location.pathname === "/todo" ? "navbar-active" : ""
+            }`}
+            to="/todo"
+          >
             Todo
           </NavLink>
-          <NavLink className="navbar-item" to="/contacts">
+          <NavLink
+            className={`navbar-item ${
+              location.pathname === "/contacts" ? "navbar-active" : ""
+            }`}
+            to="/contacts"
+          >
             Contacts
           </NavLink>
-          <NavLink className="navbar-item" to="/voting">
+          <NavLink
+            className={`navbar-item ${
+              location.pathname === "/voting" ? "navbar-active" : ""
+            }`}
+            to="/voting"
+          >
             Voting
           </NavLink>
         </div>
