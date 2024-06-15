@@ -49,20 +49,22 @@ const TodoWrapper = () => {
 
   return (
     <>
-      <TodoForm createTodo={createTodo} />
-      {todos.map((todo, index) => {
-        return todo.isEditing ? (
-          <TodoEdit key={index} editTask={editTask} task={todo} />
-        ) : (
-          <TodoList
-            task={todo}
-            key={index}
-            toggleComplete={toggleComplete}
-            deleteTodo={deleteTodo}
-            editTodo={editTodo}
-          />
-        );
-      })}
+      <div className=" text-center flex flex-col gap-7 max-w-md my-0 mx-auto">
+        <TodoForm createTodo={createTodo} />
+        {todos.map((todo, index) => {
+          return todo.isEditing ? (
+            <TodoEdit key={index} editTask={editTask} task={todo} />
+          ) : (
+            <TodoList
+              task={todo}
+              key={index}
+              toggleComplete={toggleComplete}
+              deleteTodo={deleteTodo}
+              editTodo={editTodo}
+            />
+          );
+        })}
+      </div>
     </>
   );
 };

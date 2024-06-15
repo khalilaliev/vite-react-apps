@@ -33,12 +33,6 @@ const NewContact = ({ addContact }) => {
       <div className="modal">
         <label className="modal-overlay" htmlFor="modal-1"></label>
         <div className="modal-content flex flex-col gap-5">
-          <label
-            htmlFor="modal-1"
-            className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
-          >
-            ✕
-          </label>
           <h2 className="text-2xl text-center">Add new user!</h2>
 
           <form
