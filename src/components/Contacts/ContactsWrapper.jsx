@@ -41,14 +41,16 @@ const ContactsWrapper = () => {
 
   return (
     <>
-      {loading ? (
-        <div className="my-0 mx-auto spinner-simple"></div>
-      ) : (
-        <>
-          <ContactsTable data={data} deleteContact={deleteContact} />
-          <NewContact addContact={addContact} />
-        </>
-      )}
+      <div className=" text-center flex flex-col gap-7 w-1/2 my-0 mx-auto">
+        {loading ? (
+          <div className="my-0 mx-auto spinner-simple"></div>
+        ) : (
+          <>
+            <ContactsTable data={data} deleteContact={deleteContact} />
+            <NewContact addContact={addContact} />
+          </>
+        )}
+      </div>
     </>
   );
 };

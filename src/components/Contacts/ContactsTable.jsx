@@ -17,7 +17,7 @@ const ContactsTable = ({ data, deleteContact }) => {
                   {header.charAt(0).toUpperCase() + header.slice(1)}
                 </th>
               ))}
-              <th>Edit</th>
+              <th>Delete</th>
             </tr>
           </thead>
           <tbody>
