@@ -3,8 +3,8 @@ const VotingShowResult = ({ showResult, mostVoted, isVoted }) => {
     <>
       <label
         onClick={showResult}
-        className={`btn btn-primary w-1/3 my-0 mx-auto ${
-          isVoted ? "bg-gray-200 " : "bg-blue-400 cursor-not-allowed"
+        className={`btn w-1/3 my-0 mx-auto ${
+          !isVoted ? "bg-blue-400 cursor-not-allowed" : " "
         }`}
         htmlFor="modal-1"
       >
