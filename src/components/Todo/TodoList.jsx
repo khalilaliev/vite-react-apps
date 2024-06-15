@@ -17,13 +17,13 @@ const TodoList = ({ task, toggleComplete, deleteTodo, editTodo }) => {
           onClick={() => {
             editTodo(task.id);
           }}
-          className="cursor-pointer text-3xl"
+          className="cursor-pointer text-2xl"
         />
         <FaRegTrashCan
           onClick={() => {
             deleteTodo(task.id);
           }}
-          className="cursor-pointer text-3xl"
+          className="cursor-pointer text-2xl"
         />
       </div>
     </div>
