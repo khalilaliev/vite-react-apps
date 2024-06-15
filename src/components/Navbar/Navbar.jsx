@@ -3,6 +3,7 @@ import Contacts from "../../pages/Contacts";
 import Home from "../../pages/Home";
 import Todo from "../../pages/Todo";
 import Voting from "../../pages/Voting";
+import { FaReact } from "react-icons/fa6";
 
 const NAV_ITEMS = [
   {
@@ -33,9 +34,11 @@ const Navbar = () => {
   return (
     <>
       <div className="navbar">
-        <div className="navbar-start">
-          <Link className="navbar-item" to="/">
-            Home
+        <div className="navbar-start flex">
+          <Link className="navbar-item flex items-center gap-2" to="/">
+            <FaReact className="text-3xl" />{" "}
+            <span className="text-xl font-bold">KA</span>{" "}
+            <span className=" font-bold uppercase">Portfolio</span>
           </Link>
         </div>
         <div className="navbar-center">
