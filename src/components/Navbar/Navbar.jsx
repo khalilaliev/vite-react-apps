@@ -50,7 +50,6 @@ const Navbar = () => {
                   location.pathname === item.path ? "navbar-active" : ""
                 }`}
                 to={item.path}
-                end
               >
                 {item.title}
               </Link>
